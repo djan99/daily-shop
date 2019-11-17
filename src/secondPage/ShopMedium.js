@@ -101,7 +101,6 @@ export default class ShopMedium {
         if(name == "float") {
             let bigImg = document.getElementsByClassName('big-img')[0];
             let smallImg = document.getElementsByClassName('small-img')[0];
-            console.log(bigImg);
             // bigImg.setAttribute("style","float:right");
             // smallImg.setAttribute("style","float:left");
 

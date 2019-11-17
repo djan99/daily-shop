@@ -39,7 +39,6 @@ export default class TabView {
         this.backIcon.classList.add('backIcon');
         this.backImg = document.createElement('img');
         this.backImg.src = `${require('../image/backIcon25_52.png')}`;
-        // this.backIcon.style.backgroundPosition = '0px -356px';
         this.backIcon.appendChild(this.backImg);
         this.topTitle.appendChild(this.backIcon);
 
@@ -47,15 +46,13 @@ export default class TabView {
         this.titleIcon.classList.add('titleIcon');
         this.titleImg = document.createElement('img');
         this.titleImg.src = `${require('../image/titleIcon215_62.png')}`;
-        // this.titleIcon.style.backgroundPosition = '0px -455px';
-        this.titleIcon.appendChild( this.titleImg);
+        this.titleIcon.appendChild(this.titleImg);
         this.topTitle.appendChild(this.titleIcon);
 
         this.moreIcon = document.createElement('span');
         this.moreIcon.classList.add('moreIcon');
         this.moreImg = document.createElement('img');
         this.moreImg.src = `${require('../image/moreIcon48_10.png')}`;
-        // this.moreIcon.style.backgroundPosition = '0px -650px';
         this.moreIcon.appendChild(this.moreImg);
         this.topTitle.appendChild(this.moreIcon);
 
@@ -63,7 +60,6 @@ export default class TabView {
         this.shareIcon.classList.add('shareIcon');
         this.shareImg = document.createElement('img');
         this.shareImg.src = `${require('../image/shareIcon53_53.png')}`;
-        // this.shareIcon.style.backgroundPosition = '0px -558px';
         this.shareIcon.appendChild(this.shareImg);
         this.topTitle.appendChild(this.shareIcon);
 

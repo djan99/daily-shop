@@ -71,17 +71,23 @@
             })
         }
         void async function(){
-            let [obj,obj1,event] = await Promise.all([
+            let [obj,obj1,obj2,obj3,event] = await Promise.all([
                 (async () => {
                     return await (await fetch('https://static001.geekbang.org/univer/classes/js_dev/data/getRecommendationPageData')).json()
                 })(),
                 (async () => {
                     return await (await fetch('https://static001.geekbang.org/univer/classes/js_dev/data/getInterestingPageDataTypeAll')).json()
                 })(),
+                (async () => {
+                    return await (await fetch('https://static001.geekbang.org/univer/classes/js_dev/data/getInterestingPageDataTypeSuprise')).json()
+                })(),
+                (async () => {
+                    return await (await fetch('https://static001.geekbang.org/univer/classes/js_dev/data/getInterestingPageDataTypeUnexpect')).json()
+                })(),
                 happen(document,'DOMContentLoaded'),
                 loadScript('./index.js')
             ]);
-            window.render(obj,obj1,document.body);
+            window.render(obj,obj1,obj2,obj3,document.body);
         }();
     </script>
     <style type="text/css">

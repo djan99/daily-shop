@@ -1,4 +1,4 @@
-import css from './TabsView.css';
+import css from './SwitchButton.css';
 import {create} from '../create.js';
 
 
@@ -11,7 +11,7 @@ let styleElement = document.createElement('style');
 styleElement.innerHTML = css;
 document.getElementsByTagName('head')[0].appendChild(styleElement);
 
-export default class TabsView {
+export default class SwitchButton {
     constructor(config){
         this[PROPERTY_SYMBOL] = Object.create(null);
         this[ATTRIBUTE_SYMBOL] = Object.create(null);
@@ -29,7 +29,7 @@ export default class TabsView {
 
     created(){
         this.root = document.createElement("div");
-        this.root.classList.add('tabs-view');
+        this.root.classList.add('switch-button');
         
         this.headerContainer = document.createElement("div");
         this.headerContainer.classList.add('headers-container');
@@ -86,6 +86,12 @@ export default class TabsView {
 
         this[PROPERTY_SYMBOL].children.push(child);
         child.appendTo(this.contentContainer);
+        for(let i = 0; i < this.contentContainer.children.length; i++){
+            this.contentContainer.children[i].style.width = '100%';
+            this.contentContainer.children[i].style.height = '100%';
+            this.contentContainer.children[i].style.verticalAlign = "top";
+            this.contentContainer.children[i].style.display = 'inline-block';
+        }
     }
     get children(){
         return this[PROPERTY_SYMBOL].children;
